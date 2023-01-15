@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logoMobile from "../assets/logo-mobile.svg";
+import dropdown from "../assets/icon-chevron-down.svg";
+import verticalElipsis from "../assets/icon-vertical-ellipsis.svg";
+import addTask from "../assets/icon-add-task-mobile.svg";
 
 type Props = object;
 
@@ -19,6 +22,11 @@ const Header = (props: Props) => {
       <div>
         <img src={logoMobile} alt="mobile logo" />
         <h1>No Board</h1>
+        <img src={dropdown} alt="dropdown" />
+        <button>
+          <img src={addTask} alt="add task" />
+        </button>
+        <img src={verticalElipsis} alt="edit board" />
       </div>
     </header>
   );
