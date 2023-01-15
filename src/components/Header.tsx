@@ -18,15 +18,23 @@ const Header = (props: Props) => {
     window.addEventListener("resize", handleResize);
   }, []);
   return (
-    <header className="flex w-full h-16 bg-white px-4 justify-between items-center">
-      <div>
-        <img src={logoMobile} alt="mobile logo" />
-        <h1>No Board</h1>
-        <img src={dropdown} alt="dropdown" />
-        <button>
+    <header className="flex fixed w-full h-16 bg-white px-4 justify-between items-center">
+      <div className="flex gap-4 items-center">
+        <img className="w-6 h-6" src={logoMobile} alt="mobile logo" />
+        <div className="flex gap-2 items-center cursor-pointer">
+          <h1 className="text-[18px] font-bold">No Board</h1>
+          <img className="w-3 h-2" src={dropdown} alt="dropdown" />
+        </div>
+      </div>
+      <div className="flex items-center gap-4">
+        <button className="w-12 h-8 rounded-[24px] bg-[#635FC7] flex justify-center items-center cursor-pointer">
           <img src={addTask} alt="add task" />
         </button>
-        <img src={verticalElipsis} alt="edit board" />
+        <img
+          className="h-4 cursor-pointer"
+          src={verticalElipsis}
+          alt="edit board"
+        />
       </div>
     </header>
   );
